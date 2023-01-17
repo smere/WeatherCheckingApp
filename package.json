@@ -1,0 +1,20 @@
+{
+  "name": "apifinalpractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cat-names": "^3.1.0",
+    "express": "^4.18.2",
+    "request": "^2.88.2",
+    "superb": "^4.0.0",
+    "superheroes": "^3.0.0",
+    "supervillains": "^3.1.0"
+  }
+}
