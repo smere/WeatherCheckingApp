@@ -1,57 +1,24 @@
-// This is the first section which is all about npm node package manager, initializing it then installing necessary packages
-
-
-// // This part is requiring part
-// const superheroes = require("superheroes");
-// const supervillains = require("supervillains");
-// const catName = require("cat-names");
-// const superb = require("superb");
-//
-//
-//
-// // This part is using part
-//
-// const mySh = superheroes.random();
-// const mySV = supervillains.random();
-// const catname = catName.random();
-// const superword = superb.random();
-//
-// console.log("my superhero is " +  mySh);
-// console.log("my supervillain is " + mySV);
-// console.log("here is random cat name: "   + catname);
-// console.log("The word of the day : " + superword);
-
-
-//THE ABOVE CODE IS ALL ABOUT NPM, HOW TO INITIALIZE, INSTALL AND FINALLY USE THEM
-
-
-//The following section will be how to use api(api endpoint, path, parameter and authentication)
-
-//requireing express,bodyParser,https
 
 const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
 const request = require("request");
 
-// using express() and bodyParse
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-// Static file using
 
 app.use(express.static(__dirname+ "/public"));
 
-//This is the section of app.get which is used to send the response to the client when they see the root server
+
 
 app.get("/",function(req, res){
   res.sendFile(__dirname + "/index.html");
 })
 
 
-//Below is app.post section where we can get input from client server and use api key to fetch the data related to the
-// input we get from clients
+
 
 app.post("/", function(req, res){
 const input = req.body.cityName;
